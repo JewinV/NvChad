@@ -24,7 +24,7 @@ local plugins = {
   },
   {
     "hiphish/rainbow-delimiters.nvim",
-    event = "BufReadPost",
+    event = "BufRead",
     config = function()
       local rainbow_delimiters = require "rainbow-delimiters"
 
@@ -35,7 +35,6 @@ local plugins = {
         },
         query = {
           [""] = "rainbow-delimiters",
-          lua = "rainbow-blocks",
         },
         highlight = {
           "RainbowDelimiterRed",
@@ -46,6 +45,18 @@ local plugins = {
           "RainbowDelimiterViolet",
           "RainbowDelimiterCyan",
         },
+      }
+    end,
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    event = "BufRead",
+    config = function()
+      require("indent_blankline").setup {
+        -- for example, context is off by default, use this to turn it on
+        space_char_blankline = " ",
+        show_current_context = true,
+        show_current_context_start = true,
       }
     end,
   },
