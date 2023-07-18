@@ -99,8 +99,8 @@ local plugins = {
           trace = "verbose",
           settings = {
             advanced = {
-              listCount = 3,
-              inlineSuggestCount = 3,
+              listCount = 7,
+              inlineSuggestCount = 7,
             },
           },
         },
