@@ -5,8 +5,16 @@ local plugins = {
       ensure_installed = {
         "rust-analyzer",
         "pyright",
+        "black",
       },
     },
+  },
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    ft = "python",
+    opts = function()
+      return require("custom.configs.null-ls")
+    end,
   },
   {
     "neovim/nvim-lspconfig",
